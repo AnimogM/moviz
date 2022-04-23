@@ -3,8 +3,9 @@ import Image from "next/image";
 import { API_KEY } from "../utills/requests";
 
 const detail = ({ details }) => {
-
-    const URL = "https://image.tmdb.org/t/p/original/";
+  const URL = "https://image.tmdb.org/t/p/original/";
+  const na =
+    "https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png";
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 lg:p-14">
@@ -14,11 +15,7 @@ const detail = ({ details }) => {
         className=" transition-all duration-200 ease-in-out overflow-hidden"
         alt={details.title || details.original_name}
         layout="responsive"
-        src={`${URL}${
-          details.backdrop_path ||
-          details.poster_path ||
-          "wwemzKWzjKYJFfCeiB57q3r4Bcm.png"
-        }`}
+        src={`${URL}${details.backdrop_path || details.poster_path}` || na}
       />
       <div className="p-4 md:p-8">
         <h2 className="text-2xl text-white">
