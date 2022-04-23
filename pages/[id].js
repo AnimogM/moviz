@@ -15,7 +15,7 @@ const detail = ({ details }) => {
         className=" transition-all duration-200 ease-in-out overflow-hidden"
         alt={details.title || details.original_name}
         layout="responsive"
-        src={`${URL}${details.backdrop_path || details.poster_path}` || na}
+        src={`${URL + details.backdrop_path}` || `${URL + details.poster_path}` || na}
       />
       <div className="p-4 md:p-8">
         <h2 className="text-2xl text-white">
