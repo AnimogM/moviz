@@ -1,33 +1,40 @@
 import HeaderItems from "./HeaderItems"
-import {FaHome, FaSearch, FaUser, FaBox, FaLightbulb, FaCheckCircle} from "react-icons/fa"
+import { BsLightningCharge } from "react-icons/bs";
+import {
+  BiBadgeCheck,
+  BiCollection,
+  BiHome,
+  BiSearch,
+  BiUser,
+} from "react-icons/bi";
 
 export const Header = () => {
     const items = [
-        {
-            title: "home",
-            icon: <FaHome/>
-        },
-        {
-            title: "trending",
-            icon: <FaLightbulb/>
-        },
-        {
-            title: "verified",
-            icon: <FaCheckCircle/>
-        },
-        {
-            title: "collections",
-            icon: <FaBox/>
-        },
-        {
-            title: "search",
-            icon: <FaSearch/>
-        },
-        {
-            title: "account",
-            icon: <FaUser/>
-        }
-    ]
+      {
+        title: "home",
+        icon: <BiHome />,
+      },
+      {
+        title: "trending",
+        icon: <BsLightningCharge />,
+      },
+      {
+        title: "verified",
+        icon: <BiBadgeCheck />,
+      },
+      {
+        title: "collections",
+        icon: <BiCollection />,
+      },
+      {
+        title: "search",
+        icon: <BiSearch />,
+      },
+      {
+        title: "account",
+        icon: <BiUser />,
+      },
+    ];
   return (
     <div className="flex md:flex-row flex-col justify-between items-center p-5 space-y-2">
       <div className="flex justify-center items-center md:space-x-6">
